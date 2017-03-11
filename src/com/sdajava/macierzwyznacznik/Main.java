@@ -11,7 +11,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Podaj x i y punktu A:");
         this.ax = input.nextInt();
-        this.bx = input.nextInt();
+        this.ay = input.nextInt();
         System.out.println("Podaj x i y punktu B: ");
         this.bx = input.nextInt();
         this.by = input.nextInt();
@@ -27,8 +27,15 @@ public class Main {
         this.tab[2][0] = cx;
         this.tab[2][1] = cy;
         for (int i = 0; i < tab.length; i++){
-            tab[i][2] = 0;
+            tab[i][2] = 1;
         }
+
+    for(int i =0; i<tab.length; i++){
+        for(int j = 0; j < tab.length; j++) {
+            System.out.print(tab[i][j] + " ");
+        }
+        System.out.println();
+    }
     }
     public int det(){
         int det = tab[0][0] * tab[1][1] * tab[2][2] +
